@@ -1,2 +1,13 @@
 # SampleNDK
 Learning the very basics of Android NDK with Kotlin.
+
+## Requirements
+* Android Studio 3.5 Canary 7
+* Kotlin 1.3.30-eap-11
+* Android Gradle Plugin 3.5.0-alpha07
+* Gradle wrapper 5.2.1
+* AAPT 2
+* CMake 3.10.2
+
+## References
+https://proandroiddev.com/android-ndk-interaction-of-kotlin-and-c-c-5e19e35bac74
