@@ -7,8 +7,6 @@
 #include <jni.h>
 #include <string>
 
-#endif
-
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_gpetuhov_android_samplendk_MainActivity_stringFromJNI(
         JNIEnv *env,
@@ -16,3 +14,14 @@ Java_com_gpetuhov_android_samplendk_MainActivity_stringFromJNI(
     std::string hello = "Hello from C++";
     return env->NewStringUTF(hello.c_str());
 }
+
+extern "C" JNIEXPORT jint JNICALL
+Java_com_gpetuhov_android_samplendk_MainActivity_addFromJNI(
+        JNIEnv *env,
+        jobject /* this */,
+        jint x,
+        jint y) {
+    return x + y;
+}
+
+#endif // MY_INCLUDES
