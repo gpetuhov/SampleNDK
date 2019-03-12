@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
      */
     external fun stringFromJNI(): String
 
+    // This method name must be the same as the last segment of the native method name
     external fun addFromJNI(x: Int, y: Int): Int
 
     companion object {

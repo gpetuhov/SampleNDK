@@ -15,6 +15,12 @@ Java_com_gpetuhov_android_samplendk_MainActivity_stringFromJNI(
     return env->NewStringUTF(hello.c_str());
 }
 
+// Last segment of the native method name must be the same
+// as the name of the "external" method in Java/Kotlin.
+// First part of the name is the FULL name of the class
+// that contains the "external" method.
+// JNIEnv points to helper functions.
+// jobject is an instance of the class that contains "external" method.
 extern "C" JNIEXPORT jint JNICALL
 Java_com_gpetuhov_android_samplendk_MainActivity_addFromJNI(
         JNIEnv *env,
