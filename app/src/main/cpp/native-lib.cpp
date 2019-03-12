@@ -21,6 +21,9 @@ Java_com_gpetuhov_android_samplendk_MainActivity_stringFromJNI(
 // that contains the "external" method.
 // JNIEnv points to helper functions.
 // jobject is an instance of the class that contains "external" method.
+
+// To pass parameters between Java/Kotlin and native methods
+// we must use special types (jint, jdouble, jboolean etc).
 extern "C" JNIEXPORT jint JNICALL
 Java_com_gpetuhov_android_samplendk_MainActivity_addFromJNI(
         JNIEnv *env,
