@@ -11,3 +11,5 @@ Learning the very basics of Android NDK with Kotlin.
 
 ## References
 https://proandroiddev.com/android-ndk-interaction-of-kotlin-and-c-c-5e19e35bac74
+
+https://medium.com/yalantis-android/android-ndk-calling-kotlin-from-native-code-40a1cb0f6164

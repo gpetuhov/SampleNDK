@@ -33,4 +33,13 @@ Java_com_gpetuhov_android_samplendk_MainActivity_addFromJNI(
     return x + y;
 }
 
+extern "C" JNIEXPORT void JNICALL
+Java_com_gpetuhov_android_samplendk_MainActivity_calculate(
+        JNIEnv *env,
+        jobject pThis) {
+    // jobject is the reference to the caller object (in this example - MainActivity)
+
+    jint result = 156;
+}
+
 #endif // MY_INCLUDES
