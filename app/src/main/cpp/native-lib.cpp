@@ -7,6 +7,9 @@
 #include <jni.h>
 #include <string>
 
+// This is needed for logging
+#include <android/log.h>
+
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_gpetuhov_android_samplendk_MainActivity_stringFromJNI(
         JNIEnv *env,
@@ -51,8 +54,13 @@ Java_com_gpetuhov_android_samplendk_MainActivity_calculate(
     // (I)V means that method takes integer and returns void.
     jmethodID methodId = env->GetMethodID(clazz, "onCalculationsComplete", "(I)V");
 
-    // And at last call this method
-    env->CallVoidMethod(pThis, methodId, result);
+    if (methodId == NULL) {
+        // If method not found, print log
+        __android_log_print(ANDROID_LOG_INFO,  __FUNCTION__, "methodId == null");
+    } else {
+        // Otherwise call this method
+        env->CallVoidMethod(pThis, methodId, result);
+    }
 }
 
 #endif // MY_INCLUDES
