@@ -1,5 +1,5 @@
 # SampleNDK
-Learning the very basics of Android NDK with Kotlin.
+Learning the very basics of Android NDK with Kotlin. Calling native method from Kotlin, and Kotlin method from native.
 
 ## Requirements
 * Android Studio 3.5 Canary 7

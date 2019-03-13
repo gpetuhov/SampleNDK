@@ -33,6 +33,7 @@ Java_com_gpetuhov_android_samplendk_MainActivity_addFromJNI(
     return x + y;
 }
 
+// This native method calls Kotlin method
 extern "C" JNIEXPORT void JNICALL
 Java_com_gpetuhov_android_samplendk_MainActivity_calculate(
         JNIEnv *env,
