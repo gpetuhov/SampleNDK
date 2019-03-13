@@ -37,9 +37,21 @@ extern "C" JNIEXPORT void JNICALL
 Java_com_gpetuhov_android_samplendk_MainActivity_calculate(
         JNIEnv *env,
         jobject pThis) {
+
     // jobject is the reference to the caller object (in this example - MainActivity)
 
+    // This is our result. We have to pass it to Kotlin via callback.
     jint result = 156;
+
+    // First, find MainActivity class
+    jclass clazz = env->FindClass("com/gpetuhov/android/samplendk/MainActivity");
+
+    // Then get ID of the method with "onCalculationsComplete" name.
+    // (I)V means that method takes integer and returns void.
+    jmethodID methodId = env->GetMethodID(clazz, "onCalculationsComplete", "(I)V");
+
+    // And at last call this method
+    env->CallVoidMethod(pThis, methodId, result);
 }
 
 #endif // MY_INCLUDES
